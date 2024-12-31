@@ -1,8 +1,17 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import messageRouter from './routes/message.js'
+import cors from 'cors'
 
 const app = express();
+
+
+// Enable CORS for a specific origin or allow all origins
+app.use(cors({
+  origin: 'http://16.171.161.226',  // Allow your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 // Middleware to handle JSON requests
 app.use(express.json());
