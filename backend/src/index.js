@@ -7,11 +7,7 @@ const app = express();
 
 
 // Enable CORS for a specific origin or allow all origins
-app.use(cors({
-  origin: 'http://16.171.161.226',  // Allow your frontend domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+app.use(cors());
 
 // Middleware to handle JSON requests
 app.use(express.json());
