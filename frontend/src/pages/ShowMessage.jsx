@@ -12,7 +12,7 @@ const WishPage = () => {
   useEffect(() => {
     const fetchWishMessage = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/message/${userId}`);
+        const response = await axios.get(`http://3.90.114.192:5000/api/message/${userId}`);
         
         // If the API call is successful and wish message exists
         if (response.data) {

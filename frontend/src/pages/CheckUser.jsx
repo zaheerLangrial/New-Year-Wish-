@@ -17,7 +17,7 @@ const CheckUser = () => {
     }
 
     try {
-      const response = await axios.get(`http://localhost:5000/api/message/${userId}`);
+      const response = await axios.get(`http://3.90.114.192:5000/api/message/${userId}`);
       
       // Check if the response indicates that the user has a wish
       if (response.data) {
@@ -34,7 +34,9 @@ const CheckUser = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 text-white">
       <div className="bg-white text-gray-800 p-8 shadow-2xl rounded-lg w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center mb-6">🎁 Check Your New Year Wish</h1>
+        <h1 className="text-3xl font-bold text-center mb-6">Enter ID</h1>
+
+        {/* 🎁 Check Your New Year Wish */}
 
         {/* Input Field */}
         <Input
